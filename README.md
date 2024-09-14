@@ -8,8 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 run `npm install -g @angular/cli`
 
 ## Create an Angular project
-run `ng new myBank`
-Replace the SRC folder with the one in this repository. 
+run `ng new myBank` and replace the src folder with the one in this repository. 
 
 ## Development server
 Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
