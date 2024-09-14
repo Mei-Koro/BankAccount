@@ -1,0 +1,73 @@
+/* Container styling */
+#transaction {
+    text-align: right;
+    direction: rtl;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Headline styling */
+  h3 {
+    color: #007BFF; /* Change the color to a more appealing shade of blue */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph styling */
+  p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  p strong {
+    color: #555;
+  }
+  
+  /* Text alignment for the balance */
+  bdo {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Button inside link styling */
+  button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  button a:hover {
+    color: white;
+  }
+  
+  /* Delete button styling */
+  button.delete {
+    background-color: #f44336;
+  }
+  
+  button.delete:hover {
+    background-color: #d32f2f;
+  }
+  

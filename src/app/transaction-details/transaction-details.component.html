@@ -1,0 +1,14 @@
+<div id="transaction" dir=rtl>
+        <h3>תצוגת פרטי תנועה</h3>
+        <p><strong>מספר תנועה: </strong>{{TransactionById?.counter}}</p>
+        <p><strong>תאריך: </strong>{{TransactionById?.trnDate | date: "dd/MM/yyyy"}}</p>
+        <p><strong>סכום: </strong>{{TransactionById?.amount | currency:'ILS'}}</p>
+        <p><strong>סוג פעולה: </strong>{{changeTransactionNameToHebrew()}}</p>
+        <p><strong>אסמכתא: </strong>{{TransactionById?.asmachta}}</p>
+        <p><strong>הערה: </strong>{{TransactionById?.comment}}</p>
+        <p><strong>יתרה נוכחית לתנועה: </strong><bdo dir="ltr">{{TransactionById?.balance | currency:'ILS'}}</bdo></p>
+        <br><br>
+        <button><a routerLink="/TransactionTable">חזור לרשימה</a></button>
+        <button (click)="delete()" class="delete">מחק</button>
+    </div>
+    

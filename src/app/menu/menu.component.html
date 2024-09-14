@@ -1,0 +1,19 @@
+<div *ngIf="getmenuShouldAppear()">
+    <h1 style="font-family: Arial, sans-serif;text-align: center;">חשבון הבנק שלי</h1>
+    <p>
+        שם בעל החשבון:  {{getOwnerName()}}
+        <span [class.minus]='getBalance()<0'>
+            היתרה הנוכחית: <bdo dir="ltr">{{getBalance() | currency: "ILS"}}</bdo>
+        </span>
+    </p>
+    <hr>
+    <div class="menu">
+        <button (click)="logOut()" class="logout">התנתק</button>
+        <a routerLink="/ChangePassword"><button>שנה סיסמה</button></a>
+        <a routerLink="/BankAccount"><button>הזנת תנועות</button></a>
+        <a routerLink="/TransactionTable"><button>רשימת תנועות</button></a>
+        <a routerLink="/EditBankDetails"><button>פרטי החשבון</button></a>
+        <a routerLink="/AccountOwner"><button>פרטי בעל החשבון</button></a>
+    </div>
+    <hr>
+</div>

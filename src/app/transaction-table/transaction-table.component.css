@@ -1,0 +1,71 @@
+/* Container styling */
+div {
+    margin: auto;
+    width: 80%;
+    direction: rtl;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Heading styling */
+  h2 {
+    font-size: 24px;
+    color: #007BFF; /* Vibrant blue color for emphasis */
+    margin-bottom: 20px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  td {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  td a {
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  td a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for negative balance */
+  .negativeBalanceRed td {
+    background-color: lightcoral;
+    color: #fff; /* White text for better contrast */
+  }
+  
+  /* Styling for no transactions message */
+  p.BlackBigFont {
+    font-size: x-large;
+    color: #f44336; /* Red color to highlight the message */
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

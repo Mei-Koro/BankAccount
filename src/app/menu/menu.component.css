@@ -1,0 +1,86 @@
+/* Container styling */
+div {
+    text-align: center;
+    direction: rtl;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px auto;
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Account information styling */
+  p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  span {
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+    color: #555;
+  }
+  
+  .minus {
+    color: red;
+  }
+  
+  bdo {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Divider styling */
+  hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  /* Menu styling */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .menu button, .menu a {
+    text-decoration: none;
+  }
+  
+  .menu button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu a button {
+    background-color: #007BFF;
+  }
+  
+  .menu a button:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Logout button styling */
+  .menu button.logout {
+    background-color: #f44336;
+  }
+  
+  .menu button.logout:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Additional spacing */
+  br {
+    margin-top: 10px;
+  }
+  

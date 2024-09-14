@@ -1,0 +1,30 @@
+<div *ngIf="!edit" dir="rtl">
+    <h2>מסך פרטי בעל החשבון</h2>
+    <p><strong>בעל החשבון: </strong>{{owner.name}}</p>
+    <p><strong>כתובת: </strong>{{owner.address}}</p>
+    <p><strong>תעודת זהות: </strong>{{owner.tz}}</p>
+</div>
+
+<div *ngIf="edit" dir="rtl">
+    <h2>מסך שינוי פרטי בעל החשבון</h2>
+    <div class="form-group">
+        <label for="shem">שם:</label>
+        <input required type="text" id="shem" minlength="5" maxlength="30" [(ngModel)]="owner.name">
+    </div>
+    
+    <div class="form-group">
+        <label for="adrs">כתובת:</label>
+        <input required type="text" id="adrs" minlength="2" maxlength="60" [(ngModel)]="owner.address">
+    </div>
+    
+    <div class="form-group">
+        <label for="tzNum">תז:</label>
+        <input type="number" id="tzNum" [value]="owner.tz" disabled>
+    </div>
+</div>
+
+<div>
+    <button type="button" (click)="checkInput()">
+        {{(!edit) ? "ערוך פרטי חשבון" : "סיים עריכת פרטי חשבון"}}
+    </button>
+</div>

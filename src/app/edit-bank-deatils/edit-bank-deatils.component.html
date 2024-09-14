@@ -1,0 +1,27 @@
+<div *ngIf="!edit">
+    <h2>מסך פרטי בנק</h2>
+    <span><strong>שם בנק: </strong>{{bankDetails.bankName}}</span>
+    <br>
+    <span><strong>שם סניף: </strong>{{bankDetails.branchName}}</span>
+    <br>
+    <span><strong>מספר סניף: </strong>{{bankDetails.branchNumber}}</span>
+    <br>
+    <span><strong>מספר חשבון: </strong>{{bankDetails.accountNumber}}</span>
+</div>
+<div *ngIf = "edit">
+    <h2>מסך שינוי פרטי בנק</h2>
+    <label for="bankName">שם בנק:</label>
+    <input type="text" id="bankName" disabled [value]="bankDetails.bankName">
+    <br><br>
+    <label for="branchName">שם סניף:</label>
+    <input type="text" id="branchName" required minlength="2" maxlength="30" [(ngModel)]="bankDetails.branchName">
+    <br><br>
+    <label for="branchNumber">מספר סניף:</label>
+    <input type="text" id="branchNumber" required minlength="3" maxlength="3" [(ngModel)]="bankDetails.branchNumber">
+    <br><br>
+    <label for="accountNumber">מספר חשבון:</label>
+    <input type="text" id="accountNumber" required minlength="6" maxlength="10" [(ngModel)]="bankDetails.accountNumber">
+</div>
+<div>
+    <button type="button" (click)="checkInput()">{{(!edit)? "ערוך פרטי בנק" : "סיים עריכת פרטי חשבון"  }}</button>
+</div>

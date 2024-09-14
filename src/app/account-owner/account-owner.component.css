@@ -1,0 +1,89 @@
+/* General Container Styling */
+div {
+    direction: rtl;
+    text-align: right; /* Align text to the right */
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #ccc;
+    padding: 30px; /* Add padding for spacing */
+    max-width: 500px; /* Adjust width to contain content nicely */
+    margin: 50px auto; /* Center container horizontally and add vertical margin */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    background-color: #f4f7fa; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Heading Styles */
+h2 {
+    color: #333; /* Dark color for the headings */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center align heading */
+}
+
+/* Container for Label and Input */
+.form-group {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 15px; /* Space below form groups */
+    justify-content: space-between; /* Space between label and input */
+}
+
+/* Label Styles */
+label {
+    width: 30%; /* Adjust width as needed */
+    font-weight: bold;
+    margin-right: 10px; /* Space between label and input */
+    text-align: right; /* Align text to the right */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"] {
+    width: 65%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+    background-color: #f9f9f9; /* Light background color for inputs */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Disabled Input Field Styles */
+input[disabled] {
+    background-color: #e9ecef; /* Disabled input field background */
+    border-color: #dee2e6; /* Lighter border for disabled inputs */
+    cursor: not-allowed; /* Pointer cursor for disabled fields */
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor for buttons */
+    width: 100%; /* Full-width button */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Slightly darker green for hover effect */
+}
+
+/* Validation Feedback */
+:invalid {
+    background-color: lightcoral; /* Red background for invalid inputs */
+}
+
+:valid {
+    background-color: lightgreen; /* Green background for valid inputs */
+}
+
+/* Focus Styling for Inputs */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #4CAF50; /* Green border on focus */
+    background-color: #e8f0fe; /* Light blue background on focus */
+}

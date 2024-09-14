@@ -1,0 +1,35 @@
+<div id="transaction" dir=rtl>
+    <h2>מסך הזנת תנועות</h2>
+    <label for=amount>סכום: </label>
+    <input *ngIf="firstTransaction" required type=number id=amount min=0 [(ngModel)]="currentAmount">
+    <input *ngIf="!firstTransaction" required type=number id=amount min=1 [(ngModel)]="currentAmount">
+    <br>
+    <br>
+    <label for=asmachta>אסמכתא: </label>
+    <textarea id=asmachta [(ngModel)]="currentTransactionAsmachta" minlength=4 ></textarea>
+    <br>
+    <br>
+    <label for=comment>הערה: </label>
+    <textarea id=comment [(ngModel)]="currentTransactionComment" minlength=4 ></textarea>
+    <br>
+    <br>
+    <label required for=taarich>תאריך: </label>
+    <input required type=date id=taarich max='{{currentDate | date: "yyyy-MM-dd"}}' [(ngModel)]="currentTransactionDateS">
+    <br>
+    <br>
+    <label for=sugpeula>סוג פעולה: </label>
+    <select required id=sugpeula [(ngModel)]="currentTransactionType">
+        <option *ngFor="let typName of transactionTypeNames" value={{typName.num}}>{{typName.name}}</option>
+    </select>
+    <br>
+    <br>
+        <button type="button" (click)='doTransaction();'>בצע פעולה </button>
+    <br>
+    <br>
+    <p *ngIf="!lastActionFail  && transaction">
+        ב- {{transaction.trnDate | date: "dd/MM/yyyy"}} בוצעה {{transactionHebrewName}} על סך {{transaction.amount | currency: "ILS"}}
+    </p>
+    <p *ngIf="lastActionFail" dir="rtl" style="color: red;">
+        פעולה נדחתה עקב חריגה צפויה מתקרת אשראי של <bdo dir="ltr">{{accountDetails.limit|currency:'ILS'}}</bdo>
+    </p>
+</div>

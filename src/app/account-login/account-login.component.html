@@ -1,0 +1,11 @@
+<div>
+    <h2>מסך הזדהות</h2>
+    <label for=uid>דוא"ל: </label>
+    <input required type="email" id=uid [(ngModel)]="doel">
+    <br>
+    <label for=pwd>סיסמא: </label>
+    <input required type="password" id=pwd [(ngModel)]="sisma">
+    <br>
+    <br>
+    <input class="button" type="button" value="כנס" (click)="logIn()">
+</div>

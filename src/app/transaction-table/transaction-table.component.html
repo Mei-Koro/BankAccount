@@ -1,0 +1,22 @@
+<div>
+  <h2>מסך פעולות בחשבון</h2>
+    <table border="1" *ngIf="allBankTransactions.length>0" dir="rtl">
+      <caption>טבלת סיכום פעולות בחשבון</caption>
+      <tr>
+        <th>מס' תנועה</th>
+        <th>תאריך פעולה</th>
+        <th>סכום</th>
+        <th>סוג הפעולה</th>
+        <th>היתרה הרגעית</th>
+      </tr>
+      <tr *ngFor="let transaction of allBankTransactions; let i=index" [class.negativeBalanceRed] = "transaction.balance<0">
+        <td><a [routerLink]="['/TransactionDetails/' + transaction?.counter ]">{{transaction?.counter}}</a> </td>
+        <td>{{transaction?.trnDate|date:'dd/MM/yyyy'}}</td>
+        <td>{{transaction?.amount|currency:'ILS'}}</td>
+        <td>{{changeTransactionNameToHebrew(i)}}</td>
+        <td><bdo dir="ltr">{{transaction?.balance|currency:'ILS'}}</bdo></td>
+      </tr>
+    </table>
+    <p *ngIf="allBankTransactions.length==0" [class.BlackBigFont] = true>לא נמצאו פעולות לחשבון</p>
+  </div>
+  
