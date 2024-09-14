@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Install Angular CLI
 run `npm install -g @angular/cli`
 
-## Create Angular project
+## Create an Angular project
 run `ng new myBank`
 Replace the SRC folder with the one in this repository. 
 
